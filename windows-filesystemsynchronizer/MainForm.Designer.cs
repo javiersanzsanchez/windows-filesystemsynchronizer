@@ -1,6 +1,6 @@
 ﻿namespace windows_filesystemsynchronizer
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
