@@ -11,15 +11,16 @@ namespace windows_filesystemsynchronizer.FilesWatcher
     {
         private Boolean writeOnFile = true;
         private Boolean sendQueueMessage = true;
+        private String pathToWatch;
 
         private MessageLoader messageLoader = null;
 
-        public WatcherService()
+        public WatcherService(String path)
         {
-
+            this.pathToWatch = path;
             messageLoader = new MessageLoader();
 
-            var watcher = new FileSystemWatcher(@"C:\Users\Javier\Desktop\WatchedFolder");
+            var watcher = new FileSystemWatcher(this.pathToWatch);
 
             /*watcher.NotifyFilter = NotifyFilters.Attributes
                                  | NotifyFilters.CreationTime

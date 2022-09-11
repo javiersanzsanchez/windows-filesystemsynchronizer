@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 using windows_filesystemsynchronizer.FilesWatcher;
 
@@ -10,14 +11,14 @@ namespace windows_filesystemsynchronizer
         public MainForm()
         {
             InitializeComponent();
-            System.Diagnostics.Debug.WriteLine("Main");
+            //System.Diagnostics.Debug.WriteLine("Main");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.formIsHidden = false;
-            new WatcherService();
-            System.Diagnostics.Debug.WriteLine("load");
+            new WatcherService(@"C:\Users\Javier\Desktop\WatchedFolder");
+            //System.Diagnostics.Debug.WriteLine("load");
         }
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
