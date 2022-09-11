@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using windows_filesystemsynchronizer.FilesWatcher;
 
 namespace windows_filesystemsynchronizer
 {
@@ -23,6 +16,7 @@ namespace windows_filesystemsynchronizer
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.formIsHidden = false;
+            new WatcherService();
             System.Diagnostics.Debug.WriteLine("load");
         }
 
